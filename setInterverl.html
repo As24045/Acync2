@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: grey; color: wheat;">
+    <h2>Chai Aur Code</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+// setInterval(() => {                                            //1st method
+//     console.log('Amit')
+// }, 1000);
+
+// let saydate = function(str) {
+//     console.log(str, Date.now());
+// }
+// setInterval(saydate, 1000, "hi");
+
+ let interValid;
+const start = function () {
+    interValid = setInterval(startButton, 1000)
+    function startButton() {
+        console.log("Hi Amit")
+    }
+}
+document.querySelector('#start').addEventListener('click', start);
+
+const stop = function () {
+    clearInterval(interValid);
+    interValid = null;  
+}
+document.querySelector('#stop').addEventListener('click', stop);
+
+</script>
+</html>
